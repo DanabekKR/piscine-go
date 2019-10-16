@@ -20,10 +20,37 @@ func PrintNbr(n int) {
 		tt = tt / 10
 		sym := n / tt
 		n = n - sym*tt
-		for j := '0'; j <= '9'; j++ {
-			if sym+48 == int(j) {
-				z01.PrintRune(j)
-			}
+
+		if sym == 0 {
+			z01.PrintRune('0')
 		}
+		if sym == 1 {
+			z01.PrintRune('1')
+		}
+		if sym == 2 {
+			z01.PrintRune('2')
+		}
+		if sym == 3 {
+			z01.PrintRune('3')
+		}
+		if sym == 4 {
+			z01.PrintRune('4')
+		}
+		if sym == 5 {
+			z01.PrintRune('5')
+		}
+		if sym == 6 {
+			z01.PrintRune('6')
+		}
+		if sym == 7 {
+			z01.PrintRune('7')
+		}
+		if sym == 8 {
+			z01.PrintRune('8')
+		}
+		if sym == 9 {
+			z01.PrintRune('9')
+		}
+
 	}
 }
