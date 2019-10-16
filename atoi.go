@@ -10,6 +10,9 @@ func Atoi(s string) int {
 	if newStr[0] == '-' {
 		return -1 * BasicAtoi2(sstr)
 	}
+	if s == "+" || s == "-" {
+		return 0
+	}
 	if newStr[0] == '+' {
 		return BasicAtoi2(sstr)
 	}
