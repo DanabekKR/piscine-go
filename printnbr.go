@@ -20,6 +20,10 @@ func PrintNbr(n int) {
 		tt = tt / 10
 		sym := n / tt
 		n = n - sym*tt
-		z01.PrintRune(48 + rune(sym))
+		for j := '0'; j <= '9'; j++ {
+			if sym+48 == int(j) {
+				z01.PrintRune(j)
+			}
+		}
 	}
 }
