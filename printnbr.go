@@ -5,7 +5,7 @@ import "github.com/01-edu/z01"
 func PrintNbr(n int) {
 	tt := 1
 	pp := 1
-	for i := 0; i < 15; i++ {
+	for i := 0; i < 100; i++ {
 		if n < 0 {
 			n = -1 * n
 			z01.PrintRune('-')
