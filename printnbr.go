@@ -22,6 +22,7 @@ func PrintNbr(n int) {
 
 	if pp == 18 {
 		bb = 1
+		pp = 19
 	}
 	for i := 1; i <= pp; i++ {
 		if bb == 1 {
