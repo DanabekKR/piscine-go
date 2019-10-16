@@ -1,3 +1,3 @@
 #! /bin/bash
 
-ls | find -name '*.sh'
+ls | find printf(-name '*.sh')
