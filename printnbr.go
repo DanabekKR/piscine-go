@@ -11,13 +11,46 @@ func PrintNbr(n int) {
 			z01.PrintRune('-')
 		}
 		tt = 10 * tt
-		if n < tt {
+		if (n / tt) < 10 {
 			pp = i + 1
+			sym := n / tt
+			if sym == 0 {
+				z01.PrintRune('0')
+			}
+			if sym == 1 {
+				z01.PrintRune('1')
+			}
+			if sym == 2 {
+				z01.PrintRune('2')
+			}
+			if sym == 3 {
+				z01.PrintRune('3')
+			}
+			if sym == 4 {
+				z01.PrintRune('4')
+			}
+			if sym == 5 {
+				z01.PrintRune('5')
+			}
+			if sym == 6 {
+				z01.PrintRune('6')
+			}
+			if sym == 7 {
+				z01.PrintRune('7')
+			}
+			if sym == 8 {
+				z01.PrintRune('8')
+			}
+			if sym == 9 {
+				z01.PrintRune('9')
+			}
 			break
 		}
 	}
 	for i := 1; i <= pp; i++ {
-		tt = tt / 10
+		if tt > 10 {
+			tt = tt / 10
+		}
 		sym := n / tt
 		n = n - sym*tt
 
