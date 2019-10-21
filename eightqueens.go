@@ -27,20 +27,20 @@ func EightQueens() {
 		}
 	}
 	for ii := 0; ii < 100; ii++ {
-		//if list[ii] != 0 {
-		tmp := 10000000
-		runeNbr := list[ii]
-		for j := 0; j < 8; j++ {
+		if list[ii] != 0 {
+			tmp := 10000000
+			runeNbr := list[ii]
+			for j := 0; j < 8; j++ {
 
-			sym := runeNbr / tmp
-			runeNbr = runeNbr - sym*tmp
-			tmp = tmp / 10
-			z01.PrintRune(rune(48 + sym))
+				sym := runeNbr / tmp
+				runeNbr = runeNbr - sym*tmp
+				tmp = tmp / 10
+				z01.PrintRune(rune(48 + sym))
 
+			}
+			z01.PrintRune('\n')
 		}
-		z01.PrintRune('\n')
 	}
-	//}
 }
 func IsSafe(tableCheck [8][8]int, x int, y int) bool {
 	for i := 0; i < y; i++ {
