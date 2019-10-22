@@ -8,7 +8,11 @@ import (
 
 func main() {
 	arguments := os.Args
-	for i := 1; i < len(arguments); i++ {
+	count := 0
+	for range arguments {
+		count++
+	}
+	for i := 1; i < count; i++ {
 		pn := arguments[i]
 		if i > 0 {
 			for _, a := range pn {
