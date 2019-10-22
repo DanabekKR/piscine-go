@@ -10,7 +10,7 @@ func PrintNbrBase(nbr int, base string) {
 		n++
 	}
 	isNV := false
-	if n < 1 {
+	if n < 2 {
 		z01.PrintRune('N')
 		z01.PrintRune('V')
 		isNV = true
