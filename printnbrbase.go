@@ -5,7 +5,10 @@ import (
 )
 
 func PrintNbrBase(nbr int, base string) {
-	n := StrLen(base)
+	n := 0
+	for range base {
+		n++
+	}
 	isNV := false
 	if n < 1 {
 		z01.PrintRune('N')
