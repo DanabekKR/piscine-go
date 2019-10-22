@@ -25,6 +25,14 @@ func PrintNbrBase(nbr int, base string) {
 			}
 		}
 	}
+	for i := 0; i < n; i++ {
+		if base[i] == '+' || base[i] == '-' {
+			z01.PrintRune('N')
+			z01.PrintRune('V')
+			isNV = true
+			break
+		}
+	}
 	if !isNV {
 		var list [100]int
 		for i := range list {
