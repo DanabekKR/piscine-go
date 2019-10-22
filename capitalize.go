@@ -12,6 +12,10 @@ func Capitalize(s string) string {
 			res = res + string(rune(s[i]-32))
 			continue
 		}
+		if (s[i] >= 'A' && s[i] <= 'Z') && isLetter(rune(s[i-1])) {
+			res = res + string(rune(s[i]+32))
+			continue
+		}
 		res = res + string(s[i])
 	}
 	return res
