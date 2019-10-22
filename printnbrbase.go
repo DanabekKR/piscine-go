@@ -46,8 +46,9 @@ func PrintNbrBase(nbr int, base string) {
 		}
 		if nbr == -9223372036854775808 {
 			isNeg = true
-			list[app] = n + nbr%n
-			nbr = (nbr/n)*(-1) + 1
+			list[app] = nbr % n
+
+			nbr = (nbr / n) * (-1)
 			app++
 		}
 
@@ -70,6 +71,10 @@ func PrintNbrBase(nbr int, base string) {
 			z01.PrintRune('-')
 		}
 		for i := count - 1; i >= 0; i-- {
+
+			if list[i] < 0 {
+				list[i] = list[i] * (-1)
+			}
 			tmp := list[i]
 			z01.PrintRune(rune(base[tmp]))
 		}
