@@ -46,7 +46,7 @@ func PrintNbrBase(nbr int, base string) {
 		}
 		if nbr == -9223372036854775808 {
 			isNeg = true
-			list[app] = nbr % n
+			list[app] = n + nbr%n
 			nbr = (nbr / n) * (-1)
 			app++
 		}
