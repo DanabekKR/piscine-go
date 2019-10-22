@@ -26,24 +26,30 @@ func PrintNbrBase(nbr int, base string) {
 		}
 	}
 	if !isNV {
-		var list []int
+		var list [100]int
+		for i := range list {
+			list[i] = -1
+		}
 		isNeg := false
 		if nbr < 0 {
 			nbr = nbr * (-1)
 			isNeg = true
 		}
+		app := 0
 		for i := 0; i < 100; i++ {
 			if nbr < n {
-				list = append(list, nbr)
+				list[app] = nbr
 				break
 			}
-			list = append(list, nbr%n)
+			list[app] = nbr % n
 			nbr = nbr / n
+			app++
 		}
 		count := 0
-		for range list {
-			count++
-
+		for _, a := range list {
+			if !(a == -1) {
+				count++
+			}
 		}
 		if isNeg {
 			z01.PrintRune('-')
