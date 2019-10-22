@@ -7,7 +7,7 @@ func PrintNbrInOrder(n int) {
 	var list []int
 	countNum := 0
 	t := n
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 20; i++ {
 		if t < 10 {
 			countNum++
 			break
