@@ -38,12 +38,19 @@ func PrintNbrBase(nbr int, base string) {
 		for i := range list {
 			list[i] = -1
 		}
+		app := 0
 		isNeg := false
-		if nbr < 0 {
+		if nbr < 0 && nbr != -9223372036854775808 {
 			nbr = nbr * (-1)
 			isNeg = true
 		}
-		app := 0
+		if nbr == -9223372036854775808 {
+			isNeg = true
+			list[app] = nbr % n
+			nbr = (nbr / n) * (-1)
+			app++
+		}
+
 		for i := 0; i < 100; i++ {
 			if nbr < n {
 				list[app] = nbr
