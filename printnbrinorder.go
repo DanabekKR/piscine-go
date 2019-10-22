@@ -20,7 +20,13 @@ func PrintNbrInOrder(n int) {
 		list = append(list, nbr)
 		n = n / 10
 	}
-	SortIntegerTable(list)
+	for i := 0; i < countNum; i++ {
+		for j := i; j < countNum; j++ {
+			if list[i] > list[j] {
+				Swap(&list[i], &list[j])
+			}
+		}
+	}
 	for i := 0; i < countNum; i++ {
 		z01.PrintRune(rune(48 + list[i]))
 	}
