@@ -10,13 +10,15 @@ func main() {
 	arguments := os.Args
 	isUpper := false
 	for i, a := range arguments {
+		if a == "--upper" {
+			isUpper = true
+			continue
+		}
 		if i != 0 && !IsNumeric(a) {
 			z01.PrintRune(' ')
 			continue
 		}
-		if a == "--upper" {
-			isUpper = true
-		}
+
 		if i != 0 && (Atoi(a) > 26 || Atoi(a) < 1) {
 			z01.PrintRune(' ')
 			continue
