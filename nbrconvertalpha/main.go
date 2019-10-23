@@ -14,7 +14,7 @@ func main() {
 			z01.PrintRune(' ')
 			continue
 		}
-		if a == "upper" {
+		if a == "--upper" {
 			isUpper = true
 		}
 		if i != 0 && (Atoi(a) > 26 || Atoi(a) < 1) {
@@ -32,6 +32,7 @@ func main() {
 			continue
 		}
 	}
+	z01.PrintRune('\n')
 
 }
 
