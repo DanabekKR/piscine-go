@@ -12,18 +12,24 @@ func main() {
 	for i, a := range arguments {
 		if i != 0 && !IsNumeric(a) {
 			z01.PrintRune(' ')
+			continue
 		}
 		if a == "upper" {
 			isUpper = true
 		}
 		if i != 0 && (Atoi(a) > 26 || Atoi(a) < 1) {
 			z01.PrintRune(' ')
+			continue
 		}
 		if i != 0 && isUpper {
-			z01.PrintRune(rune(Atoi(a) + 64))
+			tmp0 := Atoi(a) + 64
+			z01.PrintRune(rune(tmp0))
+			continue
 		}
 		if i != 0 && !isUpper {
-			z01.PrintRune(rune(Atoi(a) + 96))
+			tmp1 := Atoi(a) + 96
+			z01.PrintRune(rune(tmp1))
+			continue
 		}
 	}
 
