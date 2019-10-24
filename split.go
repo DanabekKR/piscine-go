@@ -14,7 +14,7 @@ func Split(str, charset string) []string {
 			wCount++
 		}
 	}
-	println(wCount)
+
 	res := make([]string, wCount)
 	wCount = 0
 	pos := 0
