@@ -35,7 +35,7 @@ func main() {
 			for j, a := range arguments[i] {
 				if a == '=' && (tmp == "--insert" || tmp == "-i") {
 					arguments[i] = arguments[i][j+1:]
-					res = arguments[i] + res
+					res = res + arguments[i]
 					ok = true
 					continue
 				}
@@ -45,7 +45,7 @@ func main() {
 				continue
 			}
 			if !ok {
-				res = res + arguments[i]
+				res = arguments[i] + res
 			}
 		}
 	}
