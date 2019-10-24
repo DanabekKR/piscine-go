@@ -30,16 +30,13 @@ func main() {
 	}
 	for i := 0; i < count; i++ {
 		if arguments[i] != namePro {
-			if arguments[i] == "--insert" || arguments[i] == "-i" {
-				res = arguments[i+1] + res
-				i++
-				continue
-			}
+			ok := false
 			tmp := ""
 			for j, a := range arguments[i] {
 				if a == '=' && (tmp == "--insert" || tmp == "-i") {
 					arguments[i] = arguments[i][j+1:]
 					res = arguments[i] + res
+					ok = true
 					continue
 				}
 				tmp = tmp + string(a)
@@ -47,16 +44,13 @@ func main() {
 			if arguments[i] == "--order" || arguments[i] == "-o" {
 				continue
 			}
-			res = res + arguments[i]
+			if !ok {
+				res = res + arguments[i]
+			}
 		}
 	}
 	if isHelp {
-		fmt.Println("--insert")
-		fmt.Println("  -i")
-		fmt.Println("    This flag inserts the string into the string passed as argument.")
-		fmt.Println("--order")
-		fmt.Println("  -o")
-		fmt.Println("    This flag will behave like a boolean, if it is called it will order the argument.")
+		fmt.Print("--insert\n  -i\n\t This flag inserts the string into the string passed as argument.\n--order\n  -o\n\t This flag will behave like a boolean, if it is called it will order the argument.\n")
 		return
 	}
 	if isOrder {
