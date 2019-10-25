@@ -52,5 +52,5 @@ func main() {
 }
 
 func isVowel(a rune) bool {
-	return (a == 'a' || a == 'e' || a == 'u' || a == 'o' || a == 'i')
+	return (a == 'a' || a == 'e' || a == 'u' || a == 'o' || a == 'i' || a == 'A' || a == 'E' || a == 'U' || a == 'O' || a == 'I')
 }
