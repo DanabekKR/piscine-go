@@ -8,9 +8,8 @@ import (
 
 func printStr(str string) {
 	arrayStr := []rune(str)
-
-	for i := 0; i < len(arrayStr); i++ {
-		z01.PrintRune(arrayStr[i])
+	for _, a := range arrayStr {
+		z01.PrintRune(a)
 	}
 	z01.PrintRune('\n')
 }
